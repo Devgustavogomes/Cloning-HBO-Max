@@ -1,0 +1,473 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --primary-color: #020228;
+    --secondary-color: #ff00e5;
+    --tertiary-color: #b535f6;
+    --btn-bg-color-gradient: linear-gradient(
+      45deg,
+      #9b34ef 0%,
+      #490cb0 80%,
+      transparent 95%
+    );
+    --btn-link-bg-color: #fff;
+    --btn-link-color: #000;
+    --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+    --divider-bg-color: linear-gradient(
+      90deg,
+      #5516ba,
+      rgba(255, 0, 229, 0.5) 80%
+    );
+    --nav-bg-color: rgba(0, 0, 0, 0.3);
+    --text-color: #fff;
+    --link-color: #9e86ff;
+    --form-bg-color: rgba(211, 211, 211, 0.06);
+    --form-field-bg-color: rgba(0, 0, 0, 0.2);
+    --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+    --form-field-placeholder: rgba(255, 255, 255, 0.7);
+    --form-field-error: rgb(255, 76, 76);
+
+    scroll-behavior: smooth;
+  }
+    /* Custom Scroll */
+    ::-webkit-scrollbar {
+        width: 8px;
+      }
+    
+      ::-webkit-scrollbar-thumb {
+        background: var(--tertiary-color);
+        border-radius: 10px;
+      }
+    
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--secondary-color);
+      }
+body{
+    background-color: #020228;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 24px;
+    text-align: center;
+  }
+nav{
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+}
+.logo{
+    width: 150px;
+    padding: 12px;
+    text-decoration: none;
+}
+.nav___links{
+    justify-self: end;
+    margin-right: 30px;
+    align-self: center;
+}
+.nav___links a{
+    color: white;
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Quicksand';
+    text-decoration: none;
+}
+.nav___links #signin{
+    border: 1px;
+    background-color: blueviolet;
+    border-radius: 60px;
+    padding: 8px 35px 8px 35px;
+    margin-left: 15px;
+    width: 180px;
+   
+}
+.nav___links #signin:hover{
+    background-color: white;
+    color: #020228;
+    transition: 1s;
+}
+main{
+    margin-top: 3.1rem;
+}
+header{
+    background:linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
+    background-size: 350% 350%;
+    animation: gradient 5s ease infinite;
+
+}
+.headercontent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 150px 0px 220px 0px;
+   
+    
+}
+.channels{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headertext {
+    color: white;
+    text-align: center;
+    margin: auto;
+    font-family: 'Raleway';
+    
+}
+.headertext h2{
+    font-size: 2rem;
+    font-weight: lighter;
+}
+.headertext h1{
+    font-size: 3rem;
+}
+.divider{
+    width: 70%;
+    max-width: 700px;
+    height: 5px;
+    background: var(--divider-bg-color);
+}
+.offer{
+    color: white;
+    text-align: center;
+    font-family: 'Raleway';
+    font-size: 1.3rem;
+}
+.offer___price{
+    font-family: "Raleway", sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.offer___price--small{
+    font-size: 1rem;
+    color: white;
+}
+.headersignbutton{
+    text-decoration: none;
+    color: white;
+    border-radius: 30px;
+    border-color: transparent;
+    background: var(--btn-bg-color-gradient);
+    font-family: 'Raleway';
+    letter-spacing: 2px;
+    font-weight: 600;
+    padding: 15px 45px 15px 45px;
+    animation: wiggle 2.2s linear infinite;
+}
+.headersignbutton:hover{
+    border: 1px solid;
+    border-color: var(--secondary-color);
+    background: transparent;
+    transition: 2s;
+}
+.text-small{
+    font-family: 'Raleway';
+    font-size: 1rem;
+    color: white;
+    width: 300px;
+    text-align: center;
+}
+/* SUBSCRIPTION CARDS*/
+.subscription {
+    background-image: url(../images/background-movies-series.png);
+    background-size: cover;
+    scroll-behavior: smooth;
+    scroll-margin-top: 80px;
+}
+.subscription h1{
+    color: white;
+    text-align: center;
+    margin: auto;
+    font-family: 'Raleway';
+    font-weight: 600;
+    max-width: 70%;
+    margin-top: 150px;
+    font-size: 2rem;
+}
+.subscription-plans{
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    perspective: 2000px;
+    margin-top: 30px;
+}
+.subscription-cards{
+    display: flex;
+    height: 600px;
+    background: var(--card-bg-color);
+    color: white;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    padding: 30px;
+    justify-content: space-between;
+}
+.subscription-price{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    justify-content: space-between;
+    font-family: 'Raleway';
+}
+.subscription-price h2:nth-child(2){
+    color: var(--secondary-color);
+    font-size: 2.2rem;
+}
+.subscription-description{
+    font-size: 1.5rem;
+    font-family: 'Raleway';
+    max-width: 500px;
+}
+.subscription-description p{
+    margin-bottom: 20px;
+}
+.subscription-description p::before{
+    content: "+";
+    margin-right: 9px;
+    font-size: 2rem;
+}
+.subscription .subscription-cards a{
+    text-decoration: none;
+    color: white;
+    padding: 20px 25px 20px 25px ;
+    border-radius: 40px;
+    text-align: center;
+    border-color: transparent;
+    font-family: 'Raleway';
+    letter-spacing: 3px;
+    font-weight: bold;
+    background:  linear-gradient(45deg, #9b34ef 0%, #490cb0 40%, transparent 90%);
+}
+.subscription .subscription-cards a:hover{
+    background: transparent;
+    border: 1px solid;
+    border-color: var(--secondary-color);
+    transform: scale(1.1);
+    transition: 1s;
+}
+.subscription-plans:has(.subscription-cards:nth-child(1):hover)
+    .subscription-cards:nth-child(2){
+        transform: rotateY(-45deg);
+        transition: 2s ease;
+    }
+.subscription-plans:has(.subscription-cards:nth-child(2):hover)
+    .subscription-cards:nth-child(1){
+        transform: rotateY(45deg);
+        transition: 2s ease;
+    }
+/*UNIVERSE CARDS*/
+.universe{
+    margin: 100px auto;
+}
+.universe h1{
+    color: white;
+    text-align: center;
+    font-family: 'Raleway';
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+.universe-plans{
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: auto;
+    gap: 40px;
+}
+.universe-cards{
+    justify-content: center;
+    transition: transform 2s;
+}
+.universe-cards img{
+    width: 100%;
+    border: 5px solid transparent;
+    transition: opacity 2s;
+}
+.universe-cards:hover img{
+    opacity: 0;
+}
+.universe-plans .universe-cards:nth-child(1):hover{
+    background-image: url(../images/hbo-hover_0.webp);
+    background-size: cover;
+    border: 5px solid;
+    border-color: var(--tertiary-color);
+    border-radius: 10px;
+    transform: scale(1.1);
+}
+.universe-plans .universe-cards:nth-child(2):hover{
+    background-image: url(../images/MAX-Hover.webp);
+    background-size: cover;
+    border: 5px solid;
+    border-color: var(--tertiary-color);
+    border-radius: 10px;
+    transform: scale(1.1);
+}
+.universe-plans .universe-cards:nth-child(3):hover{
+    background-image: url(../images/DC-Hover.webp);
+    background-size: cover;
+    border: 5px solid;
+    border-color: var(--tertiary-color);
+    border-radius: 10px;
+    transform: scale(1.1);
+}
+.universe-plans .universe-cards:nth-child(4):hover{
+    background-image: url(../images/WB-Hover.webp);
+    background-size: cover;
+    border: 5px solid;
+    border-color: var(--tertiary-color);
+    border-radius: 10px;
+    transform: scale(1.1);
+}
+.universe-plans .universe-cards:nth-child(5):hover{
+    background-image: url(../images/CN-Hover.png);
+    background-size: cover;
+    border: 5px solid;
+    border-color: var(--tertiary-color);
+    border-radius: 10px;
+    transform: scale(1.1);
+}
+.universe-plans .universe-cards:nth-child(6):hover{
+    background-image: url(../images/UCL-Hover.webp);
+    background-size: cover;
+    border: 5px solid;
+    border-color: var(--tertiary-color);
+    border-radius: 10px;
+    transform: scale(1.1);
+}
+/*FOOTER*/
+.footer-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+.footer-links a{
+    text-decoration: none;
+    color: var(--link-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: 'Raleway';
+}
+footer p{
+    color: var(--link-color);
+    text-align: center;
+    font-size: 0.8rem;
+}
+.socials{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px;
+}
+
+@media screen and (max-width: 960px) {
+    .subscription-plans{
+        flex-direction: column;
+        max-width: 70%;
+    }
+    .subscription-plans:has(.subscription-cards:nth-child(1):hover)
+        .subscription-cards:nth-child(2){
+            transform: none;
+        }
+    .subscription-plans:has(.subscription-cards:nth-child(2):hover)
+        .subscription-cards:nth-child(1){
+            transform: none;
+        }
+    .universe-plans{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+@media screen and (max-width: 600px){
+    nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        height: 150px;
+    }
+    .nav___links{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav___links #signin{
+        width: 50%;
+    }
+
+    main{
+        margin-top: 9.4rem;
+    }
+    .universe-plans{
+        grid-template-columns: repeat(6,100%);
+        overflow: auto hidden;
+    }
+    .subscription-description{
+        font-size: 1.0rem;
+    }
+    .subscription-price h2:nth-child(1){
+        font-size: 1.2rem;
+    }
+    .subscription-price h2:nth-child(2){
+        font-size: 1.5rem;
+    }
+    .footer-links a{
+        font-size: 1.0rem;
+    }
+    .footer-links{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0);
+    }
+    15%{
+        transform: rotate(-10deg);
+    }
+    20%{
+        transform: rotate(10deg);
+    }
+    25%{
+        transform: rotate(-10deg);
+    }
+    30%{
+        transform: rotate(10deg);
+    }
+    35%{
+        transform: rotate(-10deg);
+    }
+    40%,100%{
+        transform: rotate(0deg);
+    }
+
+}
+@keyframes gradient {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
